@@ -1,0 +1,180 @@
+
+
+
+
+
+.pray {
+    position: relative;
+    padding: .5em 1em;
+    margin-bottom: 1em;
+    border: 1px solid lighten($light-low, 21);
+    // background: lighten($light-low, 30);
+    border-radius: .4em;
+    width: 92%;
+
+    &__title {
+        position: relative;
+        margin-bottom: .5em;
+        max-width: 100%;
+        font-size: 1.6em;
+        font-weight: 500;
+        color: #444;
+
+        &::after {
+            content:"";
+            position: absolute;
+            bottom: -.37em;
+            left: 0;
+            width: 5em;
+            height: .01em;
+            background: lighten(#525252, 25);
+        }
+    }
+
+    &__dates {
+        margin-bottom: .5em;
+        @include align;
+        color: $light-low;
+    }
+
+    &__date {
+        margin-right: 1em;
+    }
+
+    &__content {
+        max-width: $size;
+        color: #444;
+        font-weight: 400;
+    }
+
+    &__plan {
+        margin-top: .8em;
+        @include flex;
+        flex-direction: column;
+        
+        &__title {
+            padding-bottom: .5em;
+            width: fit-content;
+            font-size: .9em;
+            color: #444;
+            border-bottom: .01em solid #ccc;
+        }
+
+        span {
+            color: #525252;
+
+            &:nth-child(3) {
+                color: $bl-low;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__button__basc {
+        position: absolute;
+        top: .5em;
+        right: .7em;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: lighten(black,40);
+    }
+
+
+    &__bottom {
+        padding-top: .5em;
+        @include between;
+        color: $light-low;
+    }
+
+    &__likes {
+        @include align;
+    }
+
+    &__delete {
+        margin-right: .8em;
+        color: lighten($reds,15);
+        cursor: pointer;
+    }
+
+    &__like {
+        color: rgb(10, 206, 10);
+        cursor: pointer;
+
+        em {
+            font-weight: 300;
+        }
+    }
+
+    &__check {
+        color: $reds;
+    }
+}
+
+// Quand tout est deja realiser 
+.pray__red {
+    position: relative;
+    padding: .5em 1em;
+    margin-bottom: 1em;
+    border: 1px solid  rgba(243, 51, 51, 0.351);
+    // background: lighten($light-low, 30);
+    border-radius: .4em;
+    width: 92%;
+    background: rgba(232, 124, 124, 0.112);
+    opacity: .5;
+
+    &__title {
+        position: relative;
+        margin-bottom: .5em;
+        max-width: 100%;
+        font-size: 1.6em;
+        font-weight: 500;
+        color: #444;
+        text-decoration: line-through;
+        color: rgba(255, 0, 0, 0.758);
+
+        &::after {
+            content:"";
+            position: absolute;
+            bottom: -.37em;
+            left: 0;
+            width: 5em;
+            height: .01em;
+            background: lighten(#525252, 25);
+        }
+    }
+
+    &__content {
+        max-width: $size;
+        color: #444;
+        font-weight: 400;
+        text-decoration: line-through;
+        color: rgba(255, 0, 0, 0.758);
+    }
+
+    &__plan {
+        // margin-top: .8em;
+        @include flex;
+        flex-direction: column;
+        text-decoration: line-through;
+        font-size: .9em;
+        color: rgba(255, 0, 0, 0.758);
+        display: none;
+        
+        &__title {
+            padding-bottom: .5em;
+            width: fit-content;
+            font-size: .5em;
+            color: #444;
+            border-bottom: .01em solid #ccc;
+        }
+
+        span {
+            color: #525252;
+
+            &:nth-child(3) {
+                color: $bl-low;
+                text-decoration: underline;
+            }
+        }
+    }
+}

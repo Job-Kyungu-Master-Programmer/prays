@@ -1,0 +1,110 @@
+
+
+
+.dash {
+
+    &__profil {
+        @include align;
+        cursor: pointer;
+        transition: opacity .2s ease-in-out;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+
+    &__image {
+        margin-right: .2em;
+        width: 3.7em;
+        height: 3.7em;
+        border-radius: 50%;
+    }
+
+    &__img {
+        object-position: center center;
+        width: $size;
+        height: $size;
+    }
+
+    &__text {
+        margin-right: .5em;
+        padding-top: .3em;
+    
+        &__name {
+            font-size: 1.1em;
+        }
+    }
+
+    &__icon {
+        transform: translateY(-20%);
+        font-size: 1.5em;
+        color: $light-low;
+    }
+    
+    &_hi {
+        color: $reds;
+    }
+
+    &__experience {
+        font-size: .9em;
+        color: $light-low;
+    }
+    // Info sera en non et absolute 
+    &__infos {
+        position: absolute;
+        padding: .5em;
+        @include flex;
+        flex-wrap: wrap;
+        width: 14.2em;
+        border: .01em solid lighten($light-low, 20);
+        border-top: none;
+        background: $light;
+        border-radius: 0 0 .5em .5em;
+        box-shadow: 0 20px 20px 0 rgb(31, 31, 31);
+        transition: clip-path .5s ease-in-out ;
+        clip-path: polygon(0 0, 100% 0, 99% 0, 0 0);
+    }
+
+    .infosUserOpen {
+        position: absolute;
+        padding: .5em;
+        @include flex;
+        flex-wrap: wrap;
+        width: 14.2em;
+        border: .01em solid lighten($light-low, 20);
+        border-top: none;
+        background: $light;
+        border-radius: 0 0 .5em .5em;
+        box-shadow: 0 20px 20px 0 rgb(31, 31, 31);
+        transition: clip-path .5s ease-in-out ;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); // For open 
+    }
+
+    &__ident {
+        margin-bottom: .3em;
+        @include between;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px dotted lighten($light-low, 20);
+    }
+
+    &__sp {
+        font-size: .8em;
+        color: $light-low;
+    }
+
+    &__person {
+        font-size: .8em;
+    }
+
+    &__logout {
+        @include resetLink;
+        margin-top: 1em;
+        padding: .4em .7em;
+        border-radius: .5em;
+        border: .01em solid lighten($reds, 20);
+        background-color: lighten($reds, 44);
+        color: $reds;
+        cursor: pointer;
+    }
+}

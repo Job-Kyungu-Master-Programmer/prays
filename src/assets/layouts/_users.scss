@@ -1,0 +1,72 @@
+
+
+
+.users {
+
+    &__icon {
+        @include align;
+        font-size: 2.1em;
+        cursor: pointer;
+        transition: color .3s linear;
+
+        &:hover {
+            color: $bl-low;
+
+            span {
+                color: $bl-low;
+            }
+        }
+    }
+
+    &__connected {
+        margin-right: .5em;
+        font-size: .45em;
+        color: $light-low;
+        transition: color .3s linear;
+    }
+     // Element qui sera ouvert avec du JS
+    &__profil {
+        position: absolute;
+        top: 3em;
+        right: 0;
+        padding: .5em .7em;
+        width: 10em;
+        min-height: auto;
+        background-color: $light;
+        border-radius: 0 0 .5em .5em;
+        box-shadow: 0 20px 20px 0 rgb(187, 187, 187);
+        transition: clip-path .5s ease-in-out ;
+        clip-path: polygon(0 0, 100% 0, 99% 0, 0 0);
+        background: $light;
+    }
+
+    &__user {
+        padding: .5em;
+        border-bottom: 1px dotted lighten($light-low, 20);
+    }
+
+    &__name {
+        font-size: 1em;
+        color: #333;
+    }
+
+    &_occupation {
+        color: $light-low;
+    }
+}
+
+.profilOpen {
+    position: absolute;
+        top: 3em;
+        right: 0;
+        padding: .5em .7em;
+        width: 10em;
+        min-height: auto;
+        background-color: $light;
+        border-radius: 0 0 .5em .5em;
+        box-shadow: 0 20px 20px 0 rgb(136, 136, 136);
+        transition: clip-path .5s ease-in-out ;
+        background-color: $light;
+        z-index: 3;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); // For open 
+}

@@ -1,0 +1,25 @@
+
+
+.notification {
+    margin: 1em auto;
+     padding: 1em;
+     width: calc($size - 20%);
+     border-radius: .5em;
+     border-width: 1px;
+     border-style: solid;
+     text-align: center;
+}
+
+.not {
+    &__error {
+       border-color: lighten($reds, 35);
+       background: lighten($reds, 44);
+       color: lighten($reds, 10);
+    }
+
+    &__sucess {
+        border-color: rgba(5, 199, 5, 0.434);
+        background:  rgba(5, 186, 5, 0.085);
+        color:  rgb(0, 182, 0);
+    }
+}
