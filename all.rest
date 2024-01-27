@@ -1,0 +1,31 @@
+
+
+POST http://localhost:3002/api/prays
+Content-Type: application/json
+
+{
+    "title": "La voix",
+    "content": "La marche",
+    "formDate": "12-12-2034",
+    "fromTime": "12:23",
+    "toTime": "12:40",
+    "important": true,
+    "userId":"65b52bcf5d101396ca939ec2"
+}
+###
+GET http://localhost:3002/api/prays
+
+###
+GET http://localhost:3002/api/users
+###
+POST http://localhost:3002/api/users
+Content-Type: application/json
+
+{
+    "name": "Jeancy 2",
+    "username": "La vie de Jeancy",
+    "occupation": "PDG",
+    "mail":"grace@gmail.com",
+    "password": "jcb",
+    "id":"1"
+}
