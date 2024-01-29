@@ -1,0 +1,44 @@
+
+
+POST http://localhost:3002/api/prays
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYWlsIjoiYXdhQGdtYWlsLmNvbSIsImlkIjoiNjViNGE3MWM4NzNkNjk4MDBlNWFjODk3IiwiaWF0IjoxNzA2MzQ1NzkzfQ.ZTmMeiYg6tLzyU2yJ7XBFXGImGJYClVmaJS2GKA7xRc
+
+{
+    "title": "Histoire  ",
+    "content": "La marche",
+    "formDate": "12-12-2034",
+    "fromTime": "12:23",
+    "toTime": "12:40",
+    "like": 0,
+    "important": false,
+    "userId":"65b4a71c873d69800e5ac897"
+}
+###
+GET http://localhost:3002/api/prays
+
+###
+GET http://localhost:3002/api/users
+###
+POST http://localhost:3002/api/users
+Content-Type: application/json
+
+{
+    "name": "Jacob",
+    "username": "khjjh",
+    "occupation": "PDG",
+    "country": "jhjhj",
+    "phone": "+79966178726",
+    "age": 27,
+    "mail":"lodokyungu@gmail.com",
+    "password": "ocean",
+    "id":"1"
+}
+###
+POST http://localhost:3002/api/login
+Content-Type: application/json
+
+{
+    "mail":"meda@gmail.com",
+    "password": "meda"
+}
