@@ -14,9 +14,25 @@ const getToken = request => {
 
 //routes 
 prayRouter.get('/', async (request, response) => {
-    const prayer = await Pray.find({})
-    .populate('user', {name: 1})
-    response.json(prayer)
+    // const prayer = await Pray.find({})
+    // .populate('user', {name: 1})
+    // response.json(prayer)
+
+
+    //Afficher uniquement les notes user connecter
+    const token = getToken(request)
+    let userId;
+    try {
+      const decodedToken = jwt.verify(token, process.env.SECRET_JWT)
+      userId = decodedToken.id;
+    } catch (err) {
+       return response.status(401).json({error: 'token invalid'})
+    }
+
+    //Afficher toutes les notes creer par l'user
+    const prayers = await Pray.find({user: userId})
+    response.json(prayers)
+
 })
 
 prayRouter.get('/:id', async (request, response) => {

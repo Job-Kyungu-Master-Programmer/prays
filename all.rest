@@ -20,18 +20,20 @@ GET http://localhost:3002/api/prays
 ###
 GET http://localhost:3002/api/users
 ###
+DELETE http://localhost:3002/api/users/65b8bc3842d6ac244aa03816
+####
 POST http://localhost:3002/api/users
 Content-Type: application/json
 
 {
-    "name": "Jacob",
-    "username": "khjjh",
+    "name": "Laurent",
+    "username": "Kyungu",
     "occupation": "PDG",
     "country": "jhjhj",
     "phone": "+79966178726",
     "age": 27,
     "mail":"lodokyungu@gmail.com",
-    "password": "ocean",
+    "password": "laurent",
     "id":"1"
 }
 ###
@@ -39,6 +41,6 @@ POST http://localhost:3002/api/login
 Content-Type: application/json
 
 {
-    "mail":"meda@gmail.com",
-    "password": "meda"
+    "mail":"lodokyungu@gmail.com",
+    "password": "laurent"
 }
